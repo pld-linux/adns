@@ -8,6 +8,7 @@ Release:	4
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
+# Source0-md5:	af4411ee10875b96c0d61f903018f438
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fix.patch
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
