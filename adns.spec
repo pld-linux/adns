@@ -1,5 +1,6 @@
-Name:		adns
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
+Summary(pl):	Zaawansowana, prosta w u¿yciu, asynchroniczna biblioteka kliencka DNS
+Name:		adns
 Version:	1.0
 Release:	1
 License:	GPL
@@ -48,8 +49,36 @@ following features:
    in case of long replies or queries, or to other nameservers if several
    are available. It has sensible handling of bad responses etc.
 
+%description -l pl
+adns jest bibliotek± rozwi±zywania nazw dla programów w C (i C++). W
+przeciwieñstwie do pozosta³ych interfejsów - gethostbyname itd. oraz
+libresolv, ma nastêpuj±ce mo¿liwo¶ci:
+ - Jest ³atwa w u¿yciu dla prostych programów, które maj± tylko
+   t³umaczyæ nazwy na adresy, szukaæ rekordów MX itp.
+ - Mo¿e byæ u¿ywana w sposób asynchroniczny, nieblokuj±cy; wiele
+   zapytañ mo¿e byæ obs³ugiwanych jednocze¶nie.
+ - Odpowiedzi s± dekodowane automatycznie do reprezentacji naturalnej
+   dla programów w C - nie trzeba obs³ugiwaæ formatów pakietów DNS
+ - Sprawdzanie poprawno¶ci (sk³adni, zgodno¶ci rekordów odwrotnych i
+   prostych, CNAME wskazuj±cych na CNAME) jest automatyczne.
+ - TTL, CNAME i podobne informacje s± zwracane w postaci ³atwej do
+   wykorzystania
+ - Nie ma globalnego stanu w bibliotece; stan resolvera jest struktur±
+   danych tworzon± przez klienta. Program mo¿e trzymaæ wiele intancji
+   resolvera.
+ - B³êdy s± zg³aszane aplikacji w sposób rozró¿niaj±cy przyczyny.
+ - Rozumie konwencjonalny plik resolv.conf, ale to mo¿e byæ zmienione
+   przez zmienne ¶rodowiskowe.
+ - Konfigurowalno¶æ. Na przyk³ad aplikacja mo¿e kazaæ adns: ignorowaæ
+   zmienne ¶rodowiskowe (dla programów setuid), wy³±czyæ sprawdzanie
+   poprawno¶ci, zignorowaæ resolv.conf na rzecz w³asnej konfiguracji.
+ - Podobno jest poprawna! Na przyk³ad, prawid³owo prze³±cza siê na TCP
+   w przypadku d³ugich zapytañ lub odpowiedzi, albo na inne serwery je¶li
+   jest kilka dostêpnych. Ma rozs±dn± obs³ugê z³ych odpowiedzi.
+
 %package devel
 Summary:	Asynchronous-capable DNS client library - development files
+Summary(pl):	Asynchroniczna biblioteka kliencka DNS - pliki dla programistów
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -58,13 +87,17 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
 Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
-Requires:	%{name} >= %{version}
+Requires:	%{name} = %{version}
 
 %description devel
 Asynchronous-capable DNS client library - development files.
 
+%description devel -l pl
+Asynchroniczna biblioteka kliencka DNS - pliki dla programistów.
+
 %package static
 Summary:	Asynchronous-capable DNS client library - static library
+Summary(pl):	Asynchroniczna biblioteka kliencka DNS - wersja statyczna
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -73,13 +106,17 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
 Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
-Requires:	%{name} >= %{version}
+Requires:	%{name} = %{version}
 
 %description static
 Asynchronous-capable DNS client library - static library.
 
+%description static -l pl
+Asynchroniczna biblioteka kliencka DNS - biblioteka statyczna.
+
 %package progs
 Summary:	Asynchronous-capable DNS client library - utility programs
+Summary(pl):	Asynchroniczna biblioteka kliencka DNS - narzêdzia
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -88,11 +125,11 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
 Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
-Requires:	%{name} >= %{version}
+Requires:	%{name} = %{version}
 
 %description progs
-DNS utility programs adns also comes with a number of utility programs
-for use from the command line and in scripts:
+DNS utility programs: adns also comes with a number of utility
+programs for use from the command line and in scripts:
  - adnslogres is a much faster version of Apache's logresolv program,
  - adnsresfilter is a filter which copies its input to its output,
    replacing IP addresses by the corresponding names, without unduly
@@ -103,6 +140,16 @@ for use from the command line and in scripts:
    lookups. In a more advanced mode it can be used as a general-purpose
    DNS helper program for scripting languages which can invoke and
    communicate with subprocesses.
+
+%description progs -l pl
+Narzêdzia DNS: adns przychodzi z paroma programami narzêdziowymi do
+u¿ytku z linii poleceñ lub w skryptach:
+ - adnslogres to o wiele szybsza wersja programu logresolv z Apache
+ - adnsresfilter to filtr kopiuj±cy wej¶cie na wyj¶cie zamieniaj±c
+   adresy IP na nazwy, bez niepotrzebnych opó¼nieñ. Na przyk³ad mo¿esz na
+   werj¶cie wpu¶ciæ wyj¶cie z netstat -n, tcpdump -ln itp.
+ - adnshost to ogólnego przeznaczenia narzêdzie do odpytywania DNS,
+   proste w u¿yciu z linii poleceñ i skryptów pow³oki.
 
 %prep
 %setup -q
@@ -126,11 +173,11 @@ ln -sf libadns.so.1.0 $RPM_BUILD_ROOT%{_libdir}/libadns.so
 
 gzip -9nf README TODO changelog
  
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -fr $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
