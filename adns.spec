@@ -5,7 +5,7 @@ Summary(uk):	Кл╕╓нтська б╕бл╕отека DNS з можлив╕стю асинхронних запит╕в
 Name:		adns
 Version:	1.1
 Release:	3
-License:	GPL
+License:	GPL v2+
 Group:		Libraries
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
 # Source0-md5:	891956e305acf5fc83b099333bf3ffd9
