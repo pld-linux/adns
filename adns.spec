@@ -7,22 +7,6 @@ Version:	1.0
 Release:	3
 License:	GPL
 Group:		Libraries
-Group(cs):	Knihovny
-Group(da):	Biblioteker
-Group(de):	Bibliotheken
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(is):	AПgerПasЖfn
-Group(it):	Librerie
-Group(ja):	╔И╔╓╔ж╔И╔Й
-Group(no):	Biblioteker
-Group(pl):	Biblioteki
-Group(pt):	Bibliotecas
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(sl):	Knji╬nice
-Group(sv):	Bibliotek
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fix.patch
@@ -148,22 +132,6 @@ Summary(pl):	Asynchroniczna biblioteka kliencka DNS - pliki dla programistСw
 Summary(ru):	Файлы для разработки с использованием библиотеки adns
 Summary(uk):	Файли для розробки з використанням б╕бл╕отеки adns
 Group:		Development/Libraries
-Group(cs):	VЩvojovИ prostЬedky/Knihovny
-Group(da):	Udvikling/Biblioteker
-Group(de):	Entwicklung/Bibliotheken
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(is):	чrСunartСl/AПgerПasЖfn
-Group(it):	Sviluppo/Librerie
-Group(ja):	Ё╚х╞/╔И╔╓╔ж╔И╔Й
-Group(no):	Utvikling/Bibliotek
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(pt):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(sl):	Razvoj/Knji╬nice
-Group(sv):	Utveckling/Bibliotek
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -186,22 +154,6 @@ Summary(pl):	Asynchroniczna biblioteka kliencka DNS - wersja statyczna
 Summary(ru):	Статические библиотеки для разработки с использованием библиотеки adns
 Summary(uk):	Статичн╕ б╕бл╕отеки для розробки з використанням б╕бл╕отеки adns
 Group:		Development/Libraries
-Group(cs):	VЩvojovИ prostЬedky/Knihovny
-Group(da):	Udvikling/Biblioteker
-Group(de):	Entwicklung/Bibliotheken
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(is):	чrСunartСl/AПgerПasЖfn
-Group(it):	Sviluppo/Librerie
-Group(ja):	Ё╚х╞/╔И╔╓╔ж╔И╔Й
-Group(no):	Utvikling/Bibliotek
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(pt):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(sl):	Razvoj/Knji╬nice
-Group(sv):	Utveckling/Bibliotek
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description static
@@ -222,22 +174,6 @@ adns - це б╕бл╕отека резолвера для програм на C (та C++). Цей пакет
 Summary:	Asynchronous-capable DNS client library - utility programs
 Summary(pl):	Asynchroniczna biblioteka kliencka DNS - narzЙdzia
 Group:		Development/Libraries
-Group(cs):	VЩvojovИ prostЬedky/Knihovny
-Group(da):	Udvikling/Biblioteker
-Group(de):	Entwicklung/Bibliotheken
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(is):	чrСunartСl/AПgerПasЖfn
-Group(it):	Sviluppo/Librerie
-Group(ja):	Ё╚х╞/╔И╔╓╔ж╔И╔Й
-Group(no):	Utvikling/Bibliotek
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(pt):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(sl):	Razvoj/Knji╬nice
-Group(sv):	Utveckling/Bibliotek
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description progs
