@@ -13,7 +13,6 @@ Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fix.patch
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
 BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -133,7 +132,7 @@ Summary(pl):	Asynchroniczna biblioteka kliencka DNS - pliki dla programistСw
 Summary(ru):	Файлы для разработки с использованием библиотеки adns
 Summary(uk):	Файли для розробки з використанням б╕бл╕отеки adns
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Asynchronous-capable DNS client library - development files.
@@ -155,7 +154,7 @@ Summary(pl):	Asynchroniczna biblioteka kliencka DNS - wersja statyczna
 Summary(ru):	Статические библиотеки для разработки с использованием библиотеки adns
 Summary(uk):	Статичн╕ б╕бл╕отеки для розробки з використанням б╕бл╕отеки adns
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Asynchronous-capable DNS client library - static library.
@@ -175,7 +174,7 @@ adns - це б╕бл╕отека резолвера для програм на C (та C++). Цей пакет
 Summary:	Asynchronous-capable DNS client library - utility programs
 Summary(pl):	Asynchroniczna biblioteka kliencka DNS - narzЙdzia
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description progs
 DNS utility programs: adns also comes with a number of utility
@@ -207,7 +206,7 @@ u©ytku z linii poleceЯ lub w skryptach:
 %patch1 -p1
 
 %build
-%{__aclocal}
+# aclocal.m4 is only local, don't run aclocal
 %{__autoconf}
 %configure \
 	--enable-dynamic
