@@ -197,7 +197,7 @@ u¿ytku z linii poleceñ lub w skryptach:
  - adnslogres to o wiele szybsza wersja programu logresolv z Apache
  - adnsresfilter to filtr kopiuj±cy wej¶cie na wyj¶cie zamieniaj±c
    adresy IP na nazwy, bez niepotrzebnych opó¼nieñ. Na przyk³ad mo¿esz na
-   werj¶cie wpu¶ciæ wyj¶cie z netstat -n, tcpdump -ln itp.
+   wej¶cie wpu¶ciæ wyj¶cie z netstat -n, tcpdump -ln itp.
  - adnshost to ogólnego przeznaczenia narzêdzie do odpytywania DNS,
    proste w u¿yciu z linii poleceñ i skryptów pow³oki.
 
