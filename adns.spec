@@ -90,7 +90,7 @@ Group(ru):	Разработка/Библиотеки
 Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} >= %{version}
 
-%description static
+%description progs
 DNS utility programs adns also comes with a number of utility programs
 for use from the command line and in scripts:
  - adnslogres is a much faster version of Apache's logresolv program,
