@@ -1,0 +1,88 @@
+diff -Nru adns-1.0/Makefile.in adns-1.0.new/Makefile.in
+--- adns-1.0/Makefile.in	Sun Sep 17 16:10:57 2000
++++ adns-1.0.new/Makefile.in	Mon Nov 19 02:34:14 2001
+@@ -38,7 +38,7 @@
+ SUBDIRS= src $(SUBDIRS_DYNAMIC) client regress
+ 
+ all install uninstall clean distclean mostlyclean maintainer-clean distprep:
+-	set -e; for d in $(SUBDIRS); do $(MAKE) -C $$d $@; done
++	set -e; for d in $(SUBDIRS); do $(MAKE) DESTDIR=$(DESTDIR) -C $$d $@; done
+ 	$(MAKE) $@-here
+ 
+ all-here install-here uninstall-here distprep-here:	README
+diff -Nru adns-1.0/client/Makefile.in adns-1.0.new/client/Makefile.in
+--- adns-1.0/client/Makefile.in	Sun Sep 17 02:43:10 2000
++++ adns-1.0.new/client/Makefile.in	Mon Nov 19 02:36:50 2001
+@@ -59,11 +59,12 @@
+ all:		$(TARGETS)
+ 
+ install:	$(TARG_INSTALL)
++		$(INSTALL) -d $(DESTDIR)$(bindir)
+ 		set -xe; for f in $(TARG_INSTALL); \
+-			do $(INSTALL_PROGRAM) $$f $(bin_dir)/$$f; done
++			do $(INSTALL_PROGRAM) $$f $(DESTDIR)$(bindir)/$$f; done
+ 
+ uninstall:
+-		for f in $(TARGETS); do rm -f $(bin_dir)/$$f; done
++		for f in $(TARGETS); do rm -f $(DESTDIR)$(bindir)/$$f; done
+ 
+ adnshost:	$(ADH_OBJS) $(DYNAMIC_DEP)
+ 		$(CC) $(LDFLAGS) $(ADH_OBJS) $(DYNAMIC_LINK) -o $@ $(LDLIBS)
+diff -Nru adns-1.0/settings.make.in adns-1.0.new/settings.make.in
+--- adns-1.0/settings.make.in	Sun Sep 17 03:01:11 2000
++++ adns-1.0.new/settings.make.in	Mon Nov 19 02:36:25 2001
+@@ -47,10 +47,10 @@
+ MKSHLIB_3=	@MKSHLIB_3@
+ 
+ prefix=		@prefix@
+-exec_prefix=	@exec_prefix@
+-bin_dir=	$(exec_prefix)/bin
+-lib_dir=	$(exec_prefix)/lib
+-include_dir=	$(prefix)/include
++execprefix=	@execprefix@
++bindir=		@bindir@
++libdir=		@libdir@
++includedir=	@includedir@
+ 
+ AC_INSTALL=	@INSTALL@
+ ifeq ($(AC_INSTALL),./install-sh -c)
+diff -Nru adns-1.0/src/Makefile.in adns-1.0.new/src/Makefile.in
+--- adns-1.0/src/Makefile.in	Sun Sep 17 02:24:24 2000
++++ adns-1.0.new/src/Makefile.in	Mon Nov 19 02:35:18 2001
+@@ -29,13 +29,14 @@
+ include		adns.make
+ 
+ install:
++		$(INSTALL) -d $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)
+ 		set -xe; for f in $(TARGETS); \
+-			do $(INSTALL_DATA) $$f $(lib_dir)/$$f; done
+-		$(INSTALL_DATA) $(srcdir)/../src/adns.h $(include_dir)/adns.h
++			do $(INSTALL_DATA) $$f $(DESTDIR)$(libdir)/$$f; done
++		$(INSTALL_DATA) $(srcdir)/../src/adns.h $(DESTDIR)$(includedir)/adns.h
+ 
+ uninstall:
+-		for f in $(TARGETS); do rm -f $(lib_dir)/$$f; done
+-		rm -f $(include_dir)/adns.h
++		for f in $(TARGETS); do rm -f $(DESTDIR)$(libdir)/$$f; done
++		rm -f $(DESTDIR)$(includedir)/adns.h
+ 
+ ALLOBJS=	$(LIBOBJS)
+ 
+--- adns-1.0/dynamic/Makefile.in~	Mon Nov 19 03:01:54 2001
++++ adns-1.0/dynamic/Makefile.in	Mon Nov 19 03:01:54 2001
+@@ -31,11 +31,12 @@
+ ALLOBJS=	$(addsuffix _p.o, $(basename $(LIBOBJS)))
+ 
+ install:
+-		$(INSTALL_PROGRAM) $(SHLIBFILE) $(lib_dir)/$(SHLIBFILE)
+-		ln -sf $(SHLIBFILE) $(lib_dir)/$(SHLIBSONAME)
++		$(INSTALL) -d $(DESTDIR)$(libdir)
++		$(INSTALL_PROGRAM) $(SHLIBFILE) $(DESTDIR)$(libdir)/$(SHLIBFILE)
++		ln -sf $(SHLIBFILE) $(DESTDIR)$(libdir)/$(SHLIBSONAME)
+ 
+ uninstall:
+-		rm -f $(lib_dir)/$(SHLIBFILE) $(lib_dir)/$(SHLIBSONAME)
++		rm -f $(DESTDIR)$(libdir)/$(SHLIBFILE) $(DESTDIR)$(libdir)/$(SHLIBSONAME)
+ 
+ $(SHLIBFORLINK):
+ 		ln -s $(SHLIBSONAME) $(SHLIBFORLINK)
