@@ -206,7 +206,7 @@ u¿ytku z linii poleceñ lub w skryptach:
 %patch1 -p1
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure \
 	--enable-dynamic
