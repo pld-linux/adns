@@ -3,12 +3,12 @@ Summary(pl):	Zaawansowana, prosta w u©yciu, asynchroniczna biblioteka kliencka D
 Summary(ru):	Клиентская библиотека DNS с возможностью асинхронных запросов
 Summary(uk):	Кл╕╓нтська б╕бл╕отека DNS з можлив╕стю асинхронних запит╕в
 Name:		adns
-Version:	1.0
-Release:	4
+Version:	1.1
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
-# Source0-md5:	af4411ee10875b96c0d61f903018f438
+# Source0-md5:	891956e305acf5fc83b099333bf3ffd9
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fix.patch
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
