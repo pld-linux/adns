@@ -207,7 +207,7 @@ u¿ytku z linii poleceñ lub w skryptach:
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 %configure \
 	--enable-dynamic
 %{__make}
