@@ -1,16 +1,27 @@
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Summary(pl):	Zaawansowana, prosta w u©yciu, asynchroniczna biblioteka kliencka DNS
+Summary(ru):	Клиентская библиотека DNS с возможностью асинхронных запросов
+Summary(uk):	Кл╕╓нтська б╕бл╕отека DNS з можлив╕стю асинхронних запит╕в
 Name:		adns
 Version:	1.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
-Group(de):	Libraries
+Group(cs):	Knihovny
+Group(da):	Biblioteker
+Group(de):	Bibliotheken
 Group(es):	Bibliotecas
 Group(fr):	Librairies
+Group(is):	AПgerПasЖfn
+Group(it):	Librerie
+Group(ja):	╔И╔╓╔ж╔И╔Й
+Group(no):	Biblioteker
 Group(pl):	Biblioteki
+Group(pt):	Bibliotecas
 Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
+Group(sl):	Knji╬nice
+Group(sv):	Bibliotek
 Group(uk):	Б╕бл╕отеки
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
@@ -76,16 +87,82 @@ libresolv, ma nastЙpuj╠ce mo©liwo╤ci:
    w przypadku dЁugich zapytaЯ lub odpowiedzi, albo na inne serwery je╤li
    jest kilka dostЙpnych. Ma rozs╠dn╠ obsЁugЙ zЁych odpowiedzi.
 
+%description -l ru
+adns - это библиотека резолвера для программ на C (и C++). В отличие
+от существующих интерфейсов, gethostbyname с компанией и libresolv.
+она имеет следующие возможности:
+ - Достаточно легкая для использования в простых программах, которым
+   нужно всего лишь транслировать имена в адреса, искать MX записи, и
+   т.п.
+ - Может использоваться асинхронным, неблокирующим способом. Множество
+   запросов может обрабатываться одновременно.
+ - Ответы автоматически декодируются в естествееное для C программ
+   представление - нет необходимости иметь дело с форматами DNS пакета.
+ - Проверка на корректность (например, проверка синтаксической
+   допустимости имен, соответсвие обратного и прямого резолвинга, CNAME,
+   указывающий на CNAME) выполняется автоматически.
+ - Время жизни записи (TTL), CNAME и другая подобная информация
+   выдается в легкой для использования форме.
+ - Ошибки сообщаются приложению таким образом, что разные причины их
+   возникновения различаются правильно.
+ - Понимает обычный resolv.conf, но это может быть изменено переменными
+   среды.
+ - Гибкость. Например, программа может заказать adns: игнорировать
+   переменные среды (для setuid программ), отключить проверки
+   корректности для возврата данных такими, как они есть, игнорировать
+   resolv.conf. пользуюсь собственной конфигурацией и т.п.
+ - Считается корректной! Например, корректно переключается на TCP в
+   случае длинных ответов или запросов, или на другие сервера имен, если
+   доступно несколько. Разбирается с некоректными ответами и т.д.
+
+%description -l uk
+adns - це б╕бл╕отека резолвера для програм на C (та C++). На в╕дм╕ну
+в╕д ╕снуючих ╕нтерфейс╕в, gethostbyname з компан╕╓ю та libresolv, вона
+ма╓ наступн╕ можливост╕:
+ - Досить легка для використання в простих програмах, як╕ лише
+   транслюють ╕мена в адреси, шукають MX записи, тощо.
+ - Може використовуватись асинхронним, неблокуючим способом. Багато
+   запит╕в можуть оброблятися одночасно.
+ - В╕дпов╕д╕ автоматично декодуються в природн╓ для C програм
+   в╕дображення - нема╓ необх╕дност╕ мати справу з форматами DNS пакету.
+ - Перев╕рка на коректн╕сть (наприклад, перев╕рка синтаксично╖
+   допустимост╕ ╕мен╕, в╕дпов╕дн╕сть зворотнього та прямого резолв╕нгу,
+   CNAME, що вказу╓ на CNAME) викону╓ться автоматично.
+ - Час життя запису (TTL), CNAME та ╕нша под╕бна ╕нформац╕я вида╓ться в
+   легк╕й для використання форм╕.
+ - Помилки пов╕домляються прикладн╕й програм╕ таким чином, що р╕зн╕
+   причини ╖х виникнення розр╕зняються правильно.
+ - Розум╕╓ звичний resolv.conf, але це може бути в╕дм╕нено зм╕нними
+   середовища.
+ - Гнучк╕сть. Наприклад, програма може замовити adns: ╕гнорувати зм╕нн╕
+   середовища (для setuid програм), в╕дключити перев╕рки коректност╕ для
+   повернення даних такими як вони ╓, ╕гнорувати resolv.conf,
+   користуючись власною конф╕гурац╕╓ю та ╕н.
+ - Вважа╓ться коректною! Наприклад, коректно переключа╓ться на TCP у
+   випадку довгих в╕дпов╕дей чи запит╕в, чи на ╕нш╕ сервери ╕мен, коли
+   доступно к╕лька. Розбира╓ться з некоректними в╕дпов╕дями та ╕н.
+
 %package devel
 Summary:	Asynchronous-capable DNS client library - development files
 Summary(pl):	Asynchroniczna biblioteka kliencka DNS - pliki dla programistСw
+Summary(ru):	Файлы для разработки с использованием библиотеки adns
+Summary(uk):	Файли для розробки з використанням б╕бл╕отеки adns
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
+Group(cs):	VЩvojovИ prostЬedky/Knihovny
+Group(da):	Udvikling/Biblioteker
+Group(de):	Entwicklung/Bibliotheken
 Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
+Group(is):	чrСunartСl/AПgerПasЖfn
+Group(it):	Sviluppo/Librerie
+Group(ja):	Ё╚х╞/╔И╔╓╔ж╔И╔Й
+Group(no):	Utvikling/Bibliotek
 Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(pt):	Desenvolvimento/Bibliotecas
 Group(ru):	Разработка/Библиотеки
+Group(sl):	Razvoj/Knji╬nice
+Group(sv):	Utveckling/Bibliotek
 Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
@@ -95,16 +172,35 @@ Asynchronous-capable DNS client library - development files.
 %description devel -l pl
 Asynchroniczna biblioteka kliencka DNS - pliki dla programistСw.
 
+%description devel -l ru
+adns - это библиотека резолвера для программ на C (и C++). Этот пакет
+содержит файлы, необходимые для разработки программ.
+
+%description devel -l uk
+adns - це б╕бл╕отека резолвера для програм на C (та C++). Цей пакет
+м╕стить файли, необх╕дн╕ для розробки програм.
+
 %package static
 Summary:	Asynchronous-capable DNS client library - static library
 Summary(pl):	Asynchroniczna biblioteka kliencka DNS - wersja statyczna
+Summary(ru):	Статические библиотеки для разработки с использованием библиотеки adns
+Summary(uk):	Статичн╕ б╕бл╕отеки для розробки з використанням б╕бл╕отеки adns
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
+Group(cs):	VЩvojovИ prostЬedky/Knihovny
+Group(da):	Udvikling/Biblioteker
+Group(de):	Entwicklung/Bibliotheken
 Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
+Group(is):	чrСunartСl/AПgerПasЖfn
+Group(it):	Sviluppo/Librerie
+Group(ja):	Ё╚х╞/╔И╔╓╔ж╔И╔Й
+Group(no):	Utvikling/Bibliotek
 Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(pt):	Desenvolvimento/Bibliotecas
 Group(ru):	Разработка/Библиотеки
+Group(sl):	Razvoj/Knji╬nice
+Group(sv):	Utveckling/Bibliotek
 Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
@@ -114,16 +210,33 @@ Asynchronous-capable DNS client library - static library.
 %description static -l pl
 Asynchroniczna biblioteka kliencka DNS - biblioteka statyczna.
 
+%description static -l ru
+adns - это библиотека резолвера для программ на C (и C++). Этот пакет
+содержит статические библиотеки для разработки программ.
+
+%description static -l uk
+adns - це б╕бл╕отека резолвера для програм на C (та C++). Цей пакет
+м╕стить статичн╕ б╕б╕л╕отеки для розробки програм.
+
 %package progs
 Summary:	Asynchronous-capable DNS client library - utility programs
 Summary(pl):	Asynchroniczna biblioteka kliencka DNS - narzЙdzia
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
+Group(cs):	VЩvojovИ prostЬedky/Knihovny
+Group(da):	Udvikling/Biblioteker
+Group(de):	Entwicklung/Bibliotheken
 Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
+Group(is):	чrСunartСl/AПgerПasЖfn
+Group(it):	Sviluppo/Librerie
+Group(ja):	Ё╚х╞/╔И╔╓╔ж╔И╔Й
+Group(no):	Utvikling/Bibliotek
 Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(pt):	Desenvolvimento/Bibliotecas
 Group(ru):	Разработка/Библиотеки
+Group(sl):	Razvoj/Knji╬nice
+Group(sv):	Utveckling/Bibliotek
 Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
