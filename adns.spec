@@ -4,7 +4,7 @@ Summary(ru):	Клиентская библиотека DNS с возможностью асинхронных запросов
 Summary(uk):	Кл╕╓нтська б╕бл╕отека DNS з можлив╕стю асинхронних запит╕в
 Name:		adns
 Version:	1.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
@@ -220,8 +220,6 @@ rm -rf $RPM_BUILD_ROOT
 
 ln -sf libadns.so.1.0 $RPM_BUILD_ROOT%{_libdir}/libadns.so
 
-gzip -9nf README TODO changelog
-
 %clean
 rm -fr $RPM_BUILD_ROOT
 
@@ -230,7 +228,7 @@ rm -fr $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README TODO changelog
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
