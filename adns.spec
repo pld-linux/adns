@@ -4,7 +4,7 @@ Summary(ru):	Клиентская библиотека DNS с возможностью асинхронных запросов
 Summary(uk):	Кл╕╓нтська б╕бл╕отека DNS з можлив╕стю асинхронних запит╕в
 Name:		adns
 Version:	1.1
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		Libraries
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
