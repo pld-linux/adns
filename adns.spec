@@ -11,6 +11,7 @@ Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.
 # Source0-md5:	891956e305acf5fc83b099333bf3ffd9
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fix.patch
+Patch2:		%{name}-gcc34.patch
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -204,6 +205,7 @@ u¿ytku z linii poleceñ lub w skryptach:
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 # aclocal.m4 is only local, don't run aclocal
