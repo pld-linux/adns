@@ -59,7 +59,7 @@ libresolv, ma nastêpuj±ce mo¿liwo¶ci:
  - TTL, CNAME i podobne informacje s± zwracane w postaci ³atwej do
    wykorzystania
  - Nie ma globalnego stanu w bibliotece; stan resolvera jest struktur±
-   danych tworzon± przez klienta. Program mo¿e trzymaæ wiele intancji
+   danych tworzon± przez klienta. Program mo¿e trzymaæ wiele instancji
    resolvera.
  - B³êdy s± zg³aszane aplikacji w sposób rozró¿niaj±cy przyczyny.
  - Rozumie konwencjonalny plik resolv.conf, ale to mo¿e byæ zmienione
