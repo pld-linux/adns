@@ -221,7 +221,7 @@ rm -rf $RPM_BUILD_ROOT
 ln -sf libadns.so.1.0 $RPM_BUILD_ROOT%{_libdir}/libadns.so
 
 gzip -9nf README TODO changelog
- 
+
 %clean
 rm -fr $RPM_BUILD_ROOT
 
