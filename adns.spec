@@ -2,7 +2,7 @@ Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Summary(pl):	Zaawansowana, prosta w u¿yciu, asynchroniczna biblioteka kliencka DNS
 Name:		adns
 Version:	1.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Group(de):	Libraries
