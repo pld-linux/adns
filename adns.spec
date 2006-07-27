@@ -3,15 +3,13 @@ Summary(pl):	Zaawansowana, prosta w u©yciu, asynchroniczna biblioteka kliencka D
 Summary(ru):	Клиентская библиотека DNS с возможностью асинхронных запросов
 Summary(uk):	Кл╕╓нтська б╕бл╕отека DNS з можлив╕стю асинхронних запит╕в
 Name:		adns
-Version:	1.1
-Release:	4
+Version:	1.3
+Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
-# Source0-md5:	891956e305acf5fc83b099333bf3ffd9
+# Source0-md5:	d19cddcc11ce3183549bab7f136e0f73
 Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-ac_fix.patch
-Patch2:		%{name}-gcc34.patch
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -204,8 +202,6 @@ u©ytku z linii poleceЯ lub w skryptach:
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 # aclocal.m4 is only local, don't run aclocal
