@@ -3,12 +3,12 @@ Summary(pl):	Zaawansowana, prosta w u©yciu, asynchroniczna biblioteka kliencka D
 Summary(ru):	Клиентская библиотека DNS с возможностью асинхронных запросов
 Summary(uk):	Кл╕╓нтська б╕бл╕отека DNS з можлив╕стю асинхронних запит╕в
 Name:		adns
-Version:	1.3
+Version:	1.4
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
-# Source0-md5:	d19cddcc11ce3183549bab7f136e0f73
+# Source0-md5:	88bc7bbf3f62a8d4fb186b8f72ead853
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
 BuildRequires:	autoconf
@@ -216,7 +216,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-ln -sf libadns.so.1.0 $RPM_BUILD_ROOT%{_libdir}/libadns.so
+cd $RPM_BUILD_ROOT%{_libdir}
+ln -sf libadns.so.*.* libadns.so
 
 %clean
 rm -fr $RPM_BUILD_ROOT
