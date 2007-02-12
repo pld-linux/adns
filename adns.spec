@@ -1,7 +1,7 @@
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
-Summary(pl):	Zaawansowana, prosta w u©yciu, asynchroniczna biblioteka kliencka DNS
-Summary(ru):	Клиентская библиотека DNS с возможностью асинхронных запросов
-Summary(uk):	Кл╕╓нтська б╕бл╕отека DNS з можлив╕стю асинхронних запит╕в
+Summary(pl.UTF-8):   Zaawansowana, prosta w uе╪yciu, asynchroniczna biblioteka kliencka DNS
+Summary(ru.UTF-8):   п п╩п╦п╣п╫я┌я│п╨п╟я▐ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟ DNS я│ п╡п╬п╥п╪п╬п╤п╫п╬я│я┌я▄я▌ п╟я│п╦п╫я┘я─п╬п╫п╫я▀я┘ п╥п╟п©я─п╬я│п╬п╡
+Summary(uk.UTF-8):   п п╩я√я■п╫я┌я│я▄п╨п╟ п╠я√п╠п╩я√п╬я┌п╣п╨п╟ DNS п╥ п╪п╬п╤п╩п╦п╡я√я│я┌я▌ п╟я│п╦п╫я┘я─п╬п╫п╫п╦я┘ п╥п╟п©п╦я┌я√п╡
 Name:		adns
 Version:	1.4
 Release:	1
@@ -43,135 +43,135 @@ following features:
   in case of long replies or queries, or to other nameservers if several
   are available. It has sensible handling of bad responses etc.
 
-%description -l pl
-adns jest bibliotek╠ rozwi╠zywania nazw dla programСw w C (i C++). W
-przeciwieЯstwie do pozostaЁych interfejsСw - gethostbyname itd. oraz
-libresolv, ma nastЙpuj╠ce mo©liwo╤ci:
-- Jest Ёatwa w u©yciu dla prostych programСw, ktСre maj╠ tylko
-  tЁumaczyФ nazwy na adresy, szukaФ rekordСw MX itp.
-- Mo©e byФ u©ywana w sposСb asynchroniczny, nieblokuj╠cy; wiele
-  zapytaЯ mo©e byФ obsЁugiwanych jednocze╤nie.
-- Odpowiedzi s╠ dekodowane automatycznie do reprezentacji naturalnej
-  dla programСw w C - nie trzeba obsЁugiwaФ formatСw pakietСw DNS
-- Sprawdzanie poprawno╤ci (skЁadni, zgodno╤ci rekordСw odwrotnych i
-  prostych, CNAME wskazuj╠cych na CNAME) jest automatyczne.
-- TTL, CNAME i podobne informacje s╠ zwracane w postaci Ёatwej do
+%description -l pl.UTF-8
+adns jest bibliotekд┘ rozwiд┘zywania nazw dla programцЁw w C (i C++). W
+przeciwieе└stwie do pozostaе┌ych interfejsцЁw - gethostbyname itd. oraz
+libresolv, ma nastд≥pujд┘ce moе╪liwoе⌡ci:
+- Jest е┌atwa w uе╪yciu dla prostych programцЁw, ktцЁre majд┘ tylko
+  tе┌umaczyд┤ nazwy na adresy, szukaд┤ rekordцЁw MX itp.
+- Moе╪e byд┤ uе╪ywana w sposцЁb asynchroniczny, nieblokujд┘cy; wiele
+  zapytaе└ moе╪e byд┤ obsе┌ugiwanych jednoczeе⌡nie.
+- Odpowiedzi sд┘ dekodowane automatycznie do reprezentacji naturalnej
+  dla programцЁw w C - nie trzeba obsе┌ugiwaд┤ formatцЁw pakietцЁw DNS
+- Sprawdzanie poprawnoе⌡ci (skе┌adni, zgodnoе⌡ci rekordцЁw odwrotnych i
+  prostych, CNAME wskazujд┘cych na CNAME) jest automatyczne.
+- TTL, CNAME i podobne informacje sд┘ zwracane w postaci е┌atwej do
   wykorzystania
-- Nie ma globalnego stanu w bibliotece; stan resolvera jest struktur╠
-  danych tworzon╠ przez klienta. Program mo©e trzymaФ wiele instancji
+- Nie ma globalnego stanu w bibliotece; stan resolvera jest strukturд┘
+  danych tworzonд┘ przez klienta. Program moе╪e trzymaд┤ wiele instancji
   resolvera.
-- BЁЙdy s╠ zgЁaszane aplikacji w sposСb rozrС©niaj╠cy przyczyny.
-- Rozumie konwencjonalny plik resolv.conf, ale to mo©e byФ zmienione
-  przez zmienne ╤rodowiskowe.
-- Konfigurowalno╤Ф. Na przykЁad aplikacja mo©e kazaФ adns: ignorowaФ
-  zmienne ╤rodowiskowe (dla programСw setuid), wyЁ╠czyФ sprawdzanie
-  poprawno╤ci, zignorowaФ resolv.conf na rzecz wЁasnej konfiguracji.
-- Podobno jest poprawna! Na przykЁad, prawidЁowo przeЁ╠cza siЙ na TCP
-  w przypadku dЁugich zapytaЯ lub odpowiedzi, albo na inne serwery je╤li
-  jest kilka dostЙpnych. Ma rozs╠dn╠ obsЁugЙ zЁych odpowiedzi.
+- Bе┌д≥dy sд┘ zgе┌aszane aplikacji w sposцЁb rozrцЁе╪niajд┘cy przyczyny.
+- Rozumie konwencjonalny plik resolv.conf, ale to moе╪e byд┤ zmienione
+  przez zmienne е⌡rodowiskowe.
+- Konfigurowalnoе⌡д┤. Na przykе┌ad aplikacja moе╪e kazaд┤ adns: ignorowaд┤
+  zmienne е⌡rodowiskowe (dla programцЁw setuid), wyе┌д┘czyд┤ sprawdzanie
+  poprawnoе⌡ci, zignorowaд┤ resolv.conf na rzecz wе┌asnej konfiguracji.
+- Podobno jest poprawna! Na przykе┌ad, prawidе┌owo przeе┌д┘cza siд≥ na TCP
+  w przypadku dе┌ugich zapytaе└ lub odpowiedzi, albo na inne serwery jeе⌡li
+  jest kilka dostд≥pnych. Ma rozsд┘dnд┘ obsе┌ugд≥ zе┌ych odpowiedzi.
 
-%description -l ru
-adns - это библиотека резолвера для программ на C (и C++). В отличие
-от существующих интерфейсов, gethostbyname с компанией и libresolv.
-она имеет следующие возможности:
-- Достаточно легкая для использования в простых программах, которым
-  нужно всего лишь транслировать имена в адреса, искать MX записи, и
-  т.п.
-- Может использоваться асинхронным, неблокирующим способом. Множество
-  запросов может обрабатываться одновременно.
-- Ответы автоматически декодируются в естествееное для C программ
-  представление - нет необходимости иметь дело с форматами DNS пакета.
-- Проверка на корректность (например, проверка синтаксической
-  допустимости имен, соответсвие обратного и прямого резолвинга, CNAME,
-  указывающий на CNAME) выполняется автоматически.
-- Время жизни записи (TTL), CNAME и другая подобная информация
-  выдается в легкой для использования форме.
-- Ошибки сообщаются приложению таким образом, что разные причины их
-  возникновения различаются правильно.
-- Понимает обычный resolv.conf, но это может быть изменено переменными
-  среды.
-- Гибкость. Например, программа может заказать adns: игнорировать
-  переменные среды (для setuid программ), отключить проверки
-  корректности для возврата данных такими, как они есть, игнорировать
-  resolv.conf. пользуюсь собственной конфигурацией и т.п.
-- Считается корректной! Например, корректно переключается на TCP в
-  случае длинных ответов или запросов, или на другие сервера имен, если
-  доступно несколько. Разбирается с некоректными ответами и т.д.
+%description -l ru.UTF-8
+adns - я█я┌п╬ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟ я─п╣п╥п╬п╩п╡п╣я─п╟ п╢п╩я▐ п©я─п╬пЁя─п╟п╪п╪ п╫п╟ C (п╦ C++). п▓ п╬я┌п╩п╦я┤п╦п╣
+п╬я┌ я│я┐я┴п╣я│я┌п╡я┐я▌я┴п╦я┘ п╦п╫я┌п╣я─я└п╣п╧я│п╬п╡, gethostbyname я│ п╨п╬п╪п©п╟п╫п╦п╣п╧ п╦ libresolv.
+п╬п╫п╟ п╦п╪п╣п╣я┌ я│п╩п╣п╢я┐я▌я┴п╦п╣ п╡п╬п╥п╪п╬п╤п╫п╬я│я┌п╦:
+- п■п╬я│я┌п╟я┌п╬я┤п╫п╬ п╩п╣пЁп╨п╟я▐ п╢п╩я▐ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦я▐ п╡ п©я─п╬я│я┌я▀я┘ п©я─п╬пЁя─п╟п╪п╪п╟я┘, п╨п╬я┌п╬я─я▀п╪
+  п╫я┐п╤п╫п╬ п╡я│п╣пЁп╬ п╩п╦я┬я▄ я┌я─п╟п╫я│п╩п╦я─п╬п╡п╟я┌я▄ п╦п╪п╣п╫п╟ п╡ п╟п╢я─п╣я│п╟, п╦я│п╨п╟я┌я▄ MX п╥п╟п©п╦я│п╦, п╦
+  я┌.п©.
+- п°п╬п╤п╣я┌ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄я│я▐ п╟я│п╦п╫я┘я─п╬п╫п╫я▀п╪, п╫п╣п╠п╩п╬п╨п╦я─я┐я▌я┴п╦п╪ я│п©п╬я│п╬п╠п╬п╪. п°п╫п╬п╤п╣я│я┌п╡п╬
+  п╥п╟п©я─п╬я│п╬п╡ п╪п╬п╤п╣я┌ п╬п╠я─п╟п╠п╟я┌я▀п╡п╟я┌я▄я│я▐ п╬п╢п╫п╬п╡я─п╣п╪п╣п╫п╫п╬.
+- п·я┌п╡п╣я┌я▀ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦ п╢п╣п╨п╬п╢п╦я─я┐я▌я┌я│я▐ п╡ п╣я│я┌п╣я│я┌п╡п╣п╣п╫п╬п╣ п╢п╩я▐ C п©я─п╬пЁя─п╟п╪п╪
+  п©я─п╣п╢я│я┌п╟п╡п╩п╣п╫п╦п╣ - п╫п╣я┌ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬я│я┌п╦ п╦п╪п╣я┌я▄ п╢п╣п╩п╬ я│ я└п╬я─п╪п╟я┌п╟п╪п╦ DNS п©п╟п╨п╣я┌п╟.
+- п÷я─п╬п╡п╣я─п╨п╟ п╫п╟ п╨п╬я─я─п╣п╨я┌п╫п╬я│я┌я▄ (п╫п╟п©я─п╦п╪п╣я─, п©я─п╬п╡п╣я─п╨п╟ я│п╦п╫я┌п╟п╨я│п╦я┤п╣я│п╨п╬п╧
+  п╢п╬п©я┐я│я┌п╦п╪п╬я│я┌п╦ п╦п╪п╣п╫, я│п╬п╬я┌п╡п╣я┌я│п╡п╦п╣ п╬п╠я─п╟я┌п╫п╬пЁп╬ п╦ п©я─я▐п╪п╬пЁп╬ я─п╣п╥п╬п╩п╡п╦п╫пЁп╟, CNAME,
+  я┐п╨п╟п╥я▀п╡п╟я▌я┴п╦п╧ п╫п╟ CNAME) п╡я▀п©п╬п╩п╫я▐п╣я┌я│я▐ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦.
+- п▓я─п╣п╪я▐ п╤п╦п╥п╫п╦ п╥п╟п©п╦я│п╦ (TTL), CNAME п╦ п╢я─я┐пЁп╟я▐ п©п╬п╢п╬п╠п╫п╟я▐ п╦п╫я└п╬я─п╪п╟я├п╦я▐
+  п╡я▀п╢п╟п╣я┌я│я▐ п╡ п╩п╣пЁп╨п╬п╧ п╢п╩я▐ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦я▐ я└п╬я─п╪п╣.
+- п·я┬п╦п╠п╨п╦ я│п╬п╬п╠я┴п╟я▌я┌я│я▐ п©я─п╦п╩п╬п╤п╣п╫п╦я▌ я┌п╟п╨п╦п╪ п╬п╠я─п╟п╥п╬п╪, я┤я┌п╬ я─п╟п╥п╫я▀п╣ п©я─п╦я┤п╦п╫я▀ п╦я┘
+  п╡п╬п╥п╫п╦п╨п╫п╬п╡п╣п╫п╦я▐ я─п╟п╥п╩п╦я┤п╟я▌я┌я│я▐ п©я─п╟п╡п╦п╩я▄п╫п╬.
+- п÷п╬п╫п╦п╪п╟п╣я┌ п╬п╠я▀я┤п╫я▀п╧ resolv.conf, п╫п╬ я█я┌п╬ п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п╦п╥п╪п╣п╫п╣п╫п╬ п©п╣я─п╣п╪п╣п╫п╫я▀п╪п╦
+  я│я─п╣п╢я▀.
+- п⌠п╦п╠п╨п╬я│я┌я▄. п²п╟п©я─п╦п╪п╣я─, п©я─п╬пЁя─п╟п╪п╪п╟ п╪п╬п╤п╣я┌ п╥п╟п╨п╟п╥п╟я┌я▄ adns: п╦пЁп╫п╬я─п╦я─п╬п╡п╟я┌я▄
+  п©п╣я─п╣п╪п╣п╫п╫я▀п╣ я│я─п╣п╢я▀ (п╢п╩я▐ setuid п©я─п╬пЁя─п╟п╪п╪), п╬я┌п╨п╩я▌я┤п╦я┌я▄ п©я─п╬п╡п╣я─п╨п╦
+  п╨п╬я─я─п╣п╨я┌п╫п╬я│я┌п╦ п╢п╩я▐ п╡п╬п╥п╡я─п╟я┌п╟ п╢п╟п╫п╫я▀я┘ я┌п╟п╨п╦п╪п╦, п╨п╟п╨ п╬п╫п╦ п╣я│я┌я▄, п╦пЁп╫п╬я─п╦я─п╬п╡п╟я┌я▄
+  resolv.conf. п©п╬п╩я▄п╥я┐я▌я│я▄ я│п╬п╠я│я┌п╡п╣п╫п╫п╬п╧ п╨п╬п╫я└п╦пЁя┐я─п╟я├п╦п╣п╧ п╦ я┌.п©.
+- п║я┤п╦я┌п╟п╣я┌я│я▐ п╨п╬я─я─п╣п╨я┌п╫п╬п╧! п²п╟п©я─п╦п╪п╣я─, п╨п╬я─я─п╣п╨я┌п╫п╬ п©п╣я─п╣п╨п╩я▌я┤п╟п╣я┌я│я▐ п╫п╟ TCP п╡
+  я│п╩я┐я┤п╟п╣ п╢п╩п╦п╫п╫я▀я┘ п╬я┌п╡п╣я┌п╬п╡ п╦п╩п╦ п╥п╟п©я─п╬я│п╬п╡, п╦п╩п╦ п╫п╟ п╢я─я┐пЁп╦п╣ я│п╣я─п╡п╣я─п╟ п╦п╪п╣п╫, п╣я│п╩п╦
+  п╢п╬я│я┌я┐п©п╫п╬ п╫п╣я│п╨п╬п╩я▄п╨п╬. п═п╟п╥п╠п╦я─п╟п╣я┌я│я▐ я│ п╫п╣п╨п╬я─п╣п╨я┌п╫я▀п╪п╦ п╬я┌п╡п╣я┌п╟п╪п╦ п╦ я┌.п╢.
 
-%description -l uk
-adns - це б╕бл╕отека резолвера для програм на C (та C++). На в╕дм╕ну
-в╕д ╕снуючих ╕нтерфейс╕в, gethostbyname з компан╕╓ю та libresolv, вона
-ма╓ наступн╕ можливост╕:
-- Досить легка для використання в простих програмах, як╕ лише
-  транслюють ╕мена в адреси, шукають MX записи, тощо.
-- Може використовуватись асинхронним, неблокуючим способом. Багато
-  запит╕в можуть оброблятися одночасно.
-- В╕дпов╕д╕ автоматично декодуються в природн╓ для C програм
-  в╕дображення - нема╓ необх╕дност╕ мати справу з форматами DNS пакету.
-- Перев╕рка на коректн╕сть (наприклад, перев╕рка синтаксично╖
-  допустимост╕ ╕мен╕, в╕дпов╕дн╕сть зворотнього та прямого резолв╕нгу,
-  CNAME, що вказу╓ на CNAME) викону╓ться автоматично.
-- Час життя запису (TTL), CNAME та ╕нша под╕бна ╕нформац╕я вида╓ться в
-  легк╕й для використання форм╕.
-- Помилки пов╕домляються прикладн╕й програм╕ таким чином, що р╕зн╕
-  причини ╖х виникнення розр╕зняються правильно.
-- Розум╕╓ звичний resolv.conf, але це може бути в╕дм╕нено зм╕нними
-  середовища.
-- Гнучк╕сть. Наприклад, програма може замовити adns: ╕гнорувати зм╕нн╕
-  середовища (для setuid програм), в╕дключити перев╕рки коректност╕ для
-  повернення даних такими як вони ╓, ╕гнорувати resolv.conf,
-  користуючись власною конф╕гурац╕╓ю та ╕н.
-- Вважа╓ться коректною! Наприклад, коректно переключа╓ться на TCP у
-  випадку довгих в╕дпов╕дей чи запит╕в, чи на ╕нш╕ сервери ╕мен, коли
-  доступно к╕лька. Розбира╓ться з некоректними в╕дпов╕дями та ╕н.
+%description -l uk.UTF-8
+adns - я├п╣ п╠я√п╠п╩я√п╬я┌п╣п╨п╟ я─п╣п╥п╬п╩п╡п╣я─п╟ п╢п╩я▐ п©я─п╬пЁя─п╟п╪ п╫п╟ C (я┌п╟ C++). п²п╟ п╡я√п╢п╪я√п╫я┐
+п╡я√п╢ я√я│п╫я┐я▌я┤п╦я┘ я√п╫я┌п╣я─я└п╣п╧я│я√п╡, gethostbyname п╥ п╨п╬п╪п©п╟п╫я√я■я▌ я┌п╟ libresolv, п╡п╬п╫п╟
+п╪п╟я■ п╫п╟я│я┌я┐п©п╫я√ п╪п╬п╤п╩п╦п╡п╬я│я┌я√:
+- п■п╬я│п╦я┌я▄ п╩п╣пЁп╨п╟ п╢п╩я▐ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐ п╡ п©я─п╬я│я┌п╦я┘ п©я─п╬пЁя─п╟п╪п╟я┘, я▐п╨я√ п╩п╦я┬п╣
+  я┌я─п╟п╫я│п╩я▌я▌я┌я▄ я√п╪п╣п╫п╟ п╡ п╟п╢я─п╣я│п╦, я┬я┐п╨п╟я▌я┌я▄ MX п╥п╟п©п╦я│п╦, я┌п╬я┴п╬.
+- п°п╬п╤п╣ п╡п╦п╨п╬я─п╦я│я┌п╬п╡я┐п╡п╟я┌п╦я│я▄ п╟я│п╦п╫я┘я─п╬п╫п╫п╦п╪, п╫п╣п╠п╩п╬п╨я┐я▌я┤п╦п╪ я│п©п╬я│п╬п╠п╬п╪. п▒п╟пЁп╟я┌п╬
+  п╥п╟п©п╦я┌я√п╡ п╪п╬п╤я┐я┌я▄ п╬п╠я─п╬п╠п╩я▐я┌п╦я│я▐ п╬п╢п╫п╬я┤п╟я│п╫п╬.
+- п▓я√п╢п©п╬п╡я√п╢я√ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╫п╬ п╢п╣п╨п╬п╢я┐я▌я┌я▄я│я▐ п╡ п©я─п╦я─п╬п╢п╫я■ п╢п╩я▐ C п©я─п╬пЁя─п╟п╪
+  п╡я√п╢п╬п╠я─п╟п╤п╣п╫п╫я▐ - п╫п╣п╪п╟я■ п╫п╣п╬п╠я┘я√п╢п╫п╬я│я┌я√ п╪п╟я┌п╦ я│п©я─п╟п╡я┐ п╥ я└п╬я─п╪п╟я┌п╟п╪п╦ DNS п©п╟п╨п╣я┌я┐.
+- п÷п╣я─п╣п╡я√я─п╨п╟ п╫п╟ п╨п╬я─п╣п╨я┌п╫я√я│я┌я▄ (п╫п╟п©я─п╦п╨п╩п╟п╢, п©п╣я─п╣п╡я√я─п╨п╟ я│п╦п╫я┌п╟п╨я│п╦я┤п╫п╬я≈
+  п╢п╬п©я┐я│я┌п╦п╪п╬я│я┌я√ я√п╪п╣п╫я√, п╡я√п╢п©п╬п╡я√п╢п╫я√я│я┌я▄ п╥п╡п╬я─п╬я┌п╫я▄п╬пЁп╬ я┌п╟ п©я─я▐п╪п╬пЁп╬ я─п╣п╥п╬п╩п╡я√п╫пЁя┐,
+  CNAME, я┴п╬ п╡п╨п╟п╥я┐я■ п╫п╟ CNAME) п╡п╦п╨п╬п╫я┐я■я┌я▄я│я▐ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╫п╬.
+- п╖п╟я│ п╤п╦я┌я┌я▐ п╥п╟п©п╦я│я┐ (TTL), CNAME я┌п╟ я√п╫я┬п╟ п©п╬п╢я√п╠п╫п╟ я√п╫я└п╬я─п╪п╟я├я√я▐ п╡п╦п╢п╟я■я┌я▄я│я▐ п╡
+  п╩п╣пЁп╨я√п╧ п╢п╩я▐ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐ я└п╬я─п╪я√.
+- п÷п╬п╪п╦п╩п╨п╦ п©п╬п╡я√п╢п╬п╪п╩я▐я▌я┌я▄я│я▐ п©я─п╦п╨п╩п╟п╢п╫я√п╧ п©я─п╬пЁя─п╟п╪я√ я┌п╟п╨п╦п╪ я┤п╦п╫п╬п╪, я┴п╬ я─я√п╥п╫я√
+  п©я─п╦я┤п╦п╫п╦ я≈я┘ п╡п╦п╫п╦п╨п╫п╣п╫п╫я▐ я─п╬п╥я─я√п╥п╫я▐я▌я┌я▄я│я▐ п©я─п╟п╡п╦п╩я▄п╫п╬.
+- п═п╬п╥я┐п╪я√я■ п╥п╡п╦я┤п╫п╦п╧ resolv.conf, п╟п╩п╣ я├п╣ п╪п╬п╤п╣ п╠я┐я┌п╦ п╡я√п╢п╪я√п╫п╣п╫п╬ п╥п╪я√п╫п╫п╦п╪п╦
+  я│п╣я─п╣п╢п╬п╡п╦я┴п╟.
+- п⌠п╫я┐я┤п╨я√я│я┌я▄. п²п╟п©я─п╦п╨п╩п╟п╢, п©я─п╬пЁя─п╟п╪п╟ п╪п╬п╤п╣ п╥п╟п╪п╬п╡п╦я┌п╦ adns: я√пЁп╫п╬я─я┐п╡п╟я┌п╦ п╥п╪я√п╫п╫я√
+  я│п╣я─п╣п╢п╬п╡п╦я┴п╟ (п╢п╩я▐ setuid п©я─п╬пЁя─п╟п╪), п╡я√п╢п╨п╩я▌я┤п╦я┌п╦ п©п╣я─п╣п╡я√я─п╨п╦ п╨п╬я─п╣п╨я┌п╫п╬я│я┌я√ п╢п╩я▐
+  п©п╬п╡п╣я─п╫п╣п╫п╫я▐ п╢п╟п╫п╦я┘ я┌п╟п╨п╦п╪п╦ я▐п╨ п╡п╬п╫п╦ я■, я√пЁп╫п╬я─я┐п╡п╟я┌п╦ resolv.conf,
+  п╨п╬я─п╦я│я┌я┐я▌я┤п╦я│я▄ п╡п╩п╟я│п╫п╬я▌ п╨п╬п╫я└я√пЁя┐я─п╟я├я√я■я▌ я┌п╟ я√п╫.
+- п▓п╡п╟п╤п╟я■я┌я▄я│я▐ п╨п╬я─п╣п╨я┌п╫п╬я▌! п²п╟п©я─п╦п╨п╩п╟п╢, п╨п╬я─п╣п╨я┌п╫п╬ п©п╣я─п╣п╨п╩я▌я┤п╟я■я┌я▄я│я▐ п╫п╟ TCP я┐
+  п╡п╦п©п╟п╢п╨я┐ п╢п╬п╡пЁп╦я┘ п╡я√п╢п©п╬п╡я√п╢п╣п╧ я┤п╦ п╥п╟п©п╦я┌я√п╡, я┤п╦ п╫п╟ я√п╫я┬я√ я│п╣я─п╡п╣я─п╦ я√п╪п╣п╫, п╨п╬п╩п╦
+  п╢п╬я│я┌я┐п©п╫п╬ п╨я√п╩я▄п╨п╟. п═п╬п╥п╠п╦я─п╟я■я┌я▄я│я▐ п╥ п╫п╣п╨п╬я─п╣п╨я┌п╫п╦п╪п╦ п╡я√п╢п©п╬п╡я√п╢я▐п╪п╦ я┌п╟ я√п╫.
 
 %package devel
 Summary:	Asynchronous-capable DNS client library - development files
-Summary(pl):	Asynchroniczna biblioteka kliencka DNS - pliki dla programistСw
-Summary(ru):	Файлы для разработки с использованием библиотеки adns
-Summary(uk):	Файли для розробки з використанням б╕бл╕отеки adns
+Summary(pl.UTF-8):   Asynchroniczna biblioteka kliencka DNS - pliki dla programistцЁw
+Summary(ru.UTF-8):   п╓п╟п╧п╩я▀ п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ я│ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣п╪ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ adns
+Summary(uk.UTF-8):   п╓п╟п╧п╩п╦ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п╥ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐п╪ п╠я√п╠п╩я√п╬я┌п╣п╨п╦ adns
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Asynchronous-capable DNS client library - development files.
 
-%description devel -l pl
-Asynchroniczna biblioteka kliencka DNS - pliki dla programistСw.
+%description devel -l pl.UTF-8
+Asynchroniczna biblioteka kliencka DNS - pliki dla programistцЁw.
 
-%description devel -l ru
-adns - это библиотека резолвера для программ на C (и C++). Этот пакет
-содержит файлы, необходимые для разработки программ.
+%description devel -l ru.UTF-8
+adns - я█я┌п╬ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟ я─п╣п╥п╬п╩п╡п╣я─п╟ п╢п╩я▐ п©я─п╬пЁя─п╟п╪п╪ п╫п╟ C (п╦ C++). п╜я┌п╬я┌ п©п╟п╨п╣я┌
+я│п╬п╢п╣я─п╤п╦я┌ я└п╟п╧п╩я▀, п╫п╣п╬п╠я┘п╬п╢п╦п╪я▀п╣ п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ п©я─п╬пЁя─п╟п╪п╪.
 
-%description devel -l uk
-adns - це б╕бл╕отека резолвера для програм на C (та C++). Цей пакет
-м╕стить файли, необх╕дн╕ для розробки програм.
+%description devel -l uk.UTF-8
+adns - я├п╣ п╠я√п╠п╩я√п╬я┌п╣п╨п╟ я─п╣п╥п╬п╩п╡п╣я─п╟ п╢п╩я▐ п©я─п╬пЁя─п╟п╪ п╫п╟ C (я┌п╟ C++). п╕п╣п╧ п©п╟п╨п╣я┌
+п╪я√я│я┌п╦я┌я▄ я└п╟п╧п╩п╦, п╫п╣п╬п╠я┘я√п╢п╫я√ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п©я─п╬пЁя─п╟п╪.
 
 %package static
 Summary:	Asynchronous-capable DNS client library - static library
-Summary(pl):	Asynchroniczna biblioteka kliencka DNS - wersja statyczna
-Summary(ru):	Статические библиотеки для разработки с использованием библиотеки adns
-Summary(uk):	Статичн╕ б╕бл╕отеки для розробки з використанням б╕бл╕отеки adns
+Summary(pl.UTF-8):   Asynchroniczna biblioteka kliencka DNS - wersja statyczna
+Summary(ru.UTF-8):   п║я┌п╟я┌п╦я┤п╣я│п╨п╦п╣ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ я│ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣п╪ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ adns
+Summary(uk.UTF-8):   п║я┌п╟я┌п╦я┤п╫я√ п╠я√п╠п╩я√п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п╥ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐п╪ п╠я√п╠п╩я√п╬я┌п╣п╨п╦ adns
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Asynchronous-capable DNS client library - static library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Asynchroniczna biblioteka kliencka DNS - biblioteka statyczna.
 
-%description static -l ru
-adns - это библиотека резолвера для программ на C (и C++). Этот пакет
-содержит статические библиотеки для разработки программ.
+%description static -l ru.UTF-8
+adns - я█я┌п╬ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╟ я─п╣п╥п╬п╩п╡п╣я─п╟ п╢п╩я▐ п©я─п╬пЁя─п╟п╪п╪ п╫п╟ C (п╦ C++). п╜я┌п╬я┌ п©п╟п╨п╣я┌
+я│п╬п╢п╣я─п╤п╦я┌ я│я┌п╟я┌п╦я┤п╣я│п╨п╦п╣ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ п©я─п╬пЁя─п╟п╪п╪.
 
-%description static -l uk
-adns - це б╕бл╕отека резолвера для програм на C (та C++). Цей пакет
-м╕стить статичн╕ б╕б╕л╕отеки для розробки програм.
+%description static -l uk.UTF-8
+adns - я├п╣ п╠я√п╠п╩я√п╬я┌п╣п╨п╟ я─п╣п╥п╬п╩п╡п╣я─п╟ п╢п╩я▐ п©я─п╬пЁя─п╟п╪ п╫п╟ C (я┌п╟ C++). п╕п╣п╧ п©п╟п╨п╣я┌
+п╪я√я│я┌п╦я┌я▄ я│я┌п╟я┌п╦я┤п╫я√ п╠я√п╠я√п╩я√п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п©я─п╬пЁя─п╟п╪.
 
 %package progs
 Summary:	Asynchronous-capable DNS client library - utility programs
-Summary(pl):	Asynchroniczna biblioteka kliencka DNS - narzЙdzia
+Summary(pl.UTF-8):   Asynchroniczna biblioteka kliencka DNS - narzд≥dzia
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -189,15 +189,15 @@ programs for use from the command line and in scripts:
   DNS helper program for scripting languages which can invoke and
   communicate with subprocesses.
 
-%description progs -l pl
-NarzЙdzia DNS: adns przychodzi z paroma programami narzЙdziowymi do
-u©ytku z linii poleceЯ lub w skryptach:
+%description progs -l pl.UTF-8
+Narzд≥dzia DNS: adns przychodzi z paroma programami narzд≥dziowymi do
+uе╪ytku z linii poleceе└ lub w skryptach:
 - adnslogres to o wiele szybsza wersja programu logresolv z Apache
-- adnsresfilter to filtr kopiuj╠cy wej╤cie na wyj╤cie zamieniaj╠c
-  adresy IP na nazwy, bez niepotrzebnych opС╪nieЯ. Na przykЁad mo©esz na
-  wej╤cie wpu╤ciФ wyj╤cie z netstat -n, tcpdump -ln itp.
-- adnshost to ogСlnego przeznaczenia narzЙdzie do odpytywania DNS,
-  proste w u©yciu z linii poleceЯ i skryptСw powЁoki.
+- adnsresfilter to filtr kopiujд┘cy wejе⌡cie na wyjе⌡cie zamieniajд┘c
+  adresy IP na nazwy, bez niepotrzebnych opцЁе╨nieе└. Na przykе┌ad moе╪esz na
+  wejе⌡cie wpuе⌡ciд┤ wyjе⌡cie z netstat -n, tcpdump -ln itp.
+- adnshost to ogцЁlnego przeznaczenia narzд≥dzie do odpytywania DNS,
+  proste w uе╪yciu z linii poleceе└ i skryptцЁw powе┌oki.
 
 %prep
 %setup -q
