@@ -1,7 +1,7 @@
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
-Summary(pl.UTF-8):   Zaawansowana, prosta w użyciu, asynchroniczna biblioteka kliencka DNS
-Summary(ru.UTF-8):   Клиентская библиотека DNS с возможностью асинхронных запросов
-Summary(uk.UTF-8):   Клієнтська бібліотека DNS з можливістю асинхронних запитів
+Summary(pl.UTF-8):	Zaawansowana, prosta w użyciu, asynchroniczna biblioteka kliencka DNS
+Summary(ru.UTF-8):	Клиентская библиотека DNS с возможностью асинхронных запросов
+Summary(uk.UTF-8):	Клієнтська бібліотека DNS з можливістю асинхронних запитів
 Name:		adns
 Version:	1.4
 Release:	1
@@ -127,9 +127,9 @@ adns - це бібліотека резолвера для програм на C
 
 %package devel
 Summary:	Asynchronous-capable DNS client library - development files
-Summary(pl.UTF-8):   Asynchroniczna biblioteka kliencka DNS - pliki dla programistów
-Summary(ru.UTF-8):   Файлы для разработки с использованием библиотеки adns
-Summary(uk.UTF-8):   Файли для розробки з використанням бібліотеки adns
+Summary(pl.UTF-8):	Asynchroniczna biblioteka kliencka DNS - pliki dla programistów
+Summary(ru.UTF-8):	Файлы для разработки с использованием библиотеки adns
+Summary(uk.UTF-8):	Файли для розробки з використанням бібліотеки adns
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -149,9 +149,9 @@ adns - це бібліотека резолвера для програм на C
 
 %package static
 Summary:	Asynchronous-capable DNS client library - static library
-Summary(pl.UTF-8):   Asynchroniczna biblioteka kliencka DNS - wersja statyczna
-Summary(ru.UTF-8):   Статические библиотеки для разработки с использованием библиотеки adns
-Summary(uk.UTF-8):   Статичні бібліотеки для розробки з використанням бібліотеки adns
+Summary(pl.UTF-8):	Asynchroniczna biblioteka kliencka DNS - wersja statyczna
+Summary(ru.UTF-8):	Статические библиотеки для разработки с использованием библиотеки adns
+Summary(uk.UTF-8):	Статичні бібліотеки для розробки з використанням бібліотеки adns
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -171,7 +171,7 @@ adns - це бібліотека резолвера для програм на C
 
 %package progs
 Summary:	Asynchronous-capable DNS client library - utility programs
-Summary(pl.UTF-8):   Asynchroniczna biblioteka kliencka DNS - narzędzia
+Summary(pl.UTF-8):	Asynchroniczna biblioteka kliencka DNS - narzędzia
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
