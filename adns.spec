@@ -194,8 +194,8 @@ Narzędzia DNS: adns przychodzi z paroma programami narzędziowymi do
 użytku z linii poleceń lub w skryptach:
 - adnslogres to o wiele szybsza wersja programu logresolv z Apache
 - adnsresfilter to filtr kopiujący wejście na wyjście zamieniając
-  adresy IP na nazwy, bez niepotrzebnych opóźnień. Na przykład możesz na
-  wejście wpuścić wyjście z netstat -n, tcpdump -ln itp.
+  adresy IP na nazwy, bez niepotrzebnych opóźnień; można na przykład
+  na wejście wpuścić wyjście z netstat -n, tcpdump -ln itp.
 - adnshost to ogólnego przeznaczenia narzędzie do odpytywania DNS,
   proste w użyciu z linii poleceń i skryptów powłoki.
 
@@ -216,8 +216,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-cd $RPM_BUILD_ROOT%{_libdir}
-ln -sf libadns.so.*.* libadns.so
+ln -sf $(basename $RPM_BUILD_ROOT%{_libdir}/libadns.so.*.*) $RPM_BUILD_ROOT%{_libdir}/libadns.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -228,18 +227,21 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README TODO changelog
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
-%attr(755,root,root) %ghost %{_libdir}/lib*.so.?
+%attr(755,root,root) %{_libdir}/libadns.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/libadns.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_includedir}/*
+%attr(755,root,root) %{_libdir}/libadns.so
+%{_includedir}/adns.h
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/libadns.a
 
 %files progs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/adnsheloex
+%attr(755,root,root) %{_bindir}/adnshost
+%attr(755,root,root) %{_bindir}/adnslogres
+%attr(755,root,root) %{_bindir}/adnsresfilter
