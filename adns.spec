@@ -4,7 +4,7 @@ Summary(ru.UTF-8):	Клиентская библиотека DNS с возмож
 Summary(uk.UTF-8):	Клієнтська бібліотека DNS з можливістю асинхронних запитів
 Name:		adns
 Version:	1.4
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Libraries
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
@@ -229,6 +229,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO changelog
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/lib*.so.?
 
 %files devel
 %defattr(644,root,root,755)
