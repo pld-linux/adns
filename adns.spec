@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Zaawansowana, prosta w użyciu, asynchroniczna biblioteka kli
 Summary(ru.UTF-8):	Клиентская библиотека DNS с возможностью асинхронных запросов
 Summary(uk.UTF-8):	Клієнтська бібліотека DNS з можливістю асинхронних запитів
 Name:		adns
-Version:	1.4
-Release:	3
+Version:	1.5.0
+Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
-# Source0-md5:	88bc7bbf3f62a8d4fb186b8f72ead853
+# Source0-md5:	261956cf66146afd292846df9af06978
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
 BuildRequires:	autoconf
