@@ -3,13 +3,12 @@ Summary(pl.UTF-8):	Zaawansowana, prosta w użyciu, asynchroniczna biblioteka kli
 Summary(ru.UTF-8):	Клиентская библиотека DNS с возможностью асинхронных запросов
 Summary(uk.UTF-8):	Клієнтська бібліотека DNS з можливістю асинхронних запитів
 Name:		adns
-Version:	1.5.1
+Version:	1.6.0
 Release:	1
-License:	GPL v2+
+License:	GPL v3+
 Group:		Libraries
-Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
-# Source0-md5:	8b6274d314af0de1a00cf3ef49f6dd56
-Patch0:		%{name}-DESTDIR.patch
+Source0:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/%{name}-%{version}.tar.gz
+# Source0-md5:	b01ba30e4b486d523059bb02ad1441f3
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -39,7 +38,7 @@ following features:
   environment variables (for setuid programs), disable sanity checks eg
   to return arbitrary data, override or ignore resolv.conf in favour of
   supplied configuration, etc.
-- Believed to be correct ! For example, will correctly back off to TCP
+- Believed to be correct! For example, will correctly back off to TCP
   in case of long replies or queries, or to other nameservers if several
   are available. It has sensible handling of bad responses etc.
 
@@ -201,7 +200,6 @@ użytku z linii poleceń lub w skryptach:
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 # aclocal.m4 is only local, don't run aclocal
@@ -216,8 +214,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-ln -sf $(basename $RPM_BUILD_ROOT%{_libdir}/libadns.so.*.*) $RPM_BUILD_ROOT%{_libdir}/libadns.so
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -226,7 +222,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README TODO changelog
+%doc GPL-vs-LGPL NEWS README TODO changelog
 %attr(755,root,root) %{_libdir}/libadns.so.*.*
 %attr(755,root,root) %ghost %{_libdir}/libadns.so.1
 
