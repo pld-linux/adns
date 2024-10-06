@@ -3,12 +3,13 @@ Summary(pl.UTF-8):	Zaawansowana, prosta w użyciu, asynchroniczna biblioteka kli
 Summary(ru.UTF-8):	Клиентская библиотека DNS с возможностью асинхронных запросов
 Summary(uk.UTF-8):	Клієнтська бібліотека DNS з можливістю асинхронних запитів
 Name:		adns
-Version:	1.6.0
+Version:	1.6.1
 Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/%{name}-%{version}.tar.gz
-# Source0-md5:	b01ba30e4b486d523059bb02ad1441f3
+# Source0-md5:	dfd46495001615819cc3a1852ce0d2e1
+Patch0:		%{name}-double-destdir.patch
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -200,6 +201,7 @@ użytku z linii poleceń lub w skryptach:
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 # aclocal.m4 is only local, don't run aclocal
