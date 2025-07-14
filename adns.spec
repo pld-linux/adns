@@ -201,7 +201,7 @@ użytku z linii poleceń lub w skryptach:
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 # aclocal.m4 is only local, don't run aclocal
